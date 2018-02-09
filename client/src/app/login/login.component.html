@@ -1,0 +1,33 @@
+<div class="login_wrapper">
+    <div class="animate form login_form">
+        <section class="login_content">
+            <div class="row">
+                <div class="center-block">
+                    <img class="logo" src="../../images/asti-logo.png" alt="ASTI LOGO"><br>
+                    DOST<br>Advance Science and Technology Institute
+                </div>
+            </div>
+            <form (ngSubmit)="login()">
+                <h1>Login Form</h1>
+                <div>
+                    <input class="form-control" placeholder="Username" name="loginname" type="email" id="email" name="email" value="sulayman@asti.dost.gov.ph" [(ngModel)]="email" requiredautofocus>
+                </div>
+                <div>
+                    <input class="form-control" placeholder="Password" type="password" id="password" name="password" value="p8uBaD5u_u#+ewa2p" [(ngModel)]="password" required>
+                </div>
+                <div>                    
+                    <input type="submit" class="btn btn-primary submit" value="Login">
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="separator">
+                    <p class="change_link"><a href="#signup" class="to_register"> Forgot Password? </a></p>
+                    <p class="change_link"><a href="#signup" class="to_register"> Create New Account </a></p>
+                    <div class="clearfix"></div>
+                    <br />
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

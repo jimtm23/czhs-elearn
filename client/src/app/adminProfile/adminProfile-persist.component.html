@@ -1,0 +1,65 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a [routerLink]="['/adminProfile','list']" class="list">AdminProfile List</a></li>
+    </ul>
+</div>
+<div id="persist-adminProfile" class="content scaffold-edit" role="main">
+    <h1>{{create ? "Create" : "Edit"}} AdminProfile</h1>
+    <ul class="errors" role="alert" *ngIf="errors">
+        <li *ngFor="let error of errors">{{error.message}}</li>
+    </ul>
+
+    <form name="save{className}" (ngSubmit)="save()">
+        <fieldset class="form">
+            <fieldset class="form">
+  <div class="fieldcontain required">
+    <label for="salutation">Salutation
+      <span class="required-indicator">*</span>
+    </label>
+    <select required="" name="salutation" id="salutation" [(ngModel)]="adminProfile.salutation">
+      <option value="MR">MR</option>
+      <option value="MS">MS</option>
+    </select>
+  </div>
+  <div class="fieldcontain required">
+    <label for="firstName">First Name
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="firstName" id="firstName" [(ngModel)]="adminProfile.firstName" type="text" pattern="" maxlength="50" />
+  </div>
+  <div class="fieldcontain">
+    <label for="middleInitial">Middle Initial</label>
+    <input name="middleInitial" id="middleInitial" [(ngModel)]="adminProfile.middleInitial" type="text" pattern="[A-Za-zÑñ]+" maxlength="4" />
+  </div>
+  <div class="fieldcontain required">
+    <label for="lastName">Last Name
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="lastName" id="lastName" [(ngModel)]="adminProfile.lastName" type="text" pattern="" maxlength="50" />
+  </div>
+  <div class="fieldcontain required">
+    <label for="nickName">Nick Name
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="nickName" id="nickName" [(ngModel)]="adminProfile.nickName" type="text" pattern="" maxlength="15" />
+  </div>
+  <div class="fieldcontain required">
+    <label for="position">Position
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="position" id="position" [(ngModel)]="adminProfile.position" type="text" pattern="" maxlength="50" />
+  </div>
+  <div class="fieldcontain">
+    <label for="account">Account</label>
+    <select name="account" id="account" [(ngModel)]="adminProfile.account">
+      <option *ngFor="let adminAccount of adminAccountList" [value]="adminAccount.id" [selected]="adminProfile.account?.id == adminAccount.id">{{adminAccount.toString()}}</option>
+    </select>
+  </div>
+</fieldset>
+        </fieldset>
+        <fieldset class="buttons">
+            <input type="submit" class="save" [value]="create ? 'Save' : 'Update'" />
+        </fieldset>
+    </form>
+</div>

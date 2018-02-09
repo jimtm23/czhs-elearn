@@ -1,0 +1,59 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a class="list" [routerLink]="['/adminProfile', 'list']" class="list">AdminProfile List</a></li>
+        <li><a class="create" [routerLink]="['/adminProfile', 'create']" class="create">New AdminProfile</a></li>
+    </ul>
+</div>
+<div id="show-part" class="content scaffold-show" role="main">
+    <h1>Show AdminProfile</h1>
+    <ol class="property-list adminProfile">
+  <li class="fieldcontain">
+    <span id="salutation-label" class="property-label">Salutation</span>
+    <div class="property-value" aria-labelledby="salutation-label">
+      <span>{{adminProfile.salutation}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="firstName-label" class="property-label">First Name</span>
+    <div class="property-value" aria-labelledby="firstName-label">
+      <span>{{adminProfile.firstName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="middleInitial-label" class="property-label">Middle Initial</span>
+    <div class="property-value" aria-labelledby="middleInitial-label">
+      <span>{{adminProfile.middleInitial}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="lastName-label" class="property-label">Last Name</span>
+    <div class="property-value" aria-labelledby="lastName-label">
+      <span>{{adminProfile.lastName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="nickName-label" class="property-label">Nick Name</span>
+    <div class="property-value" aria-labelledby="nickName-label">
+      <span>{{adminProfile.nickName}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="position-label" class="property-label">Position</span>
+    <div class="property-value" aria-labelledby="position-label">
+      <span>{{adminProfile.position}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="account-label" class="property-label">Account</span>
+    <div class="property-value" aria-labelledby="account-label">
+      <a *ngIf="adminProfile.account" [routerLink]="['/adminProfile','show', adminProfile.account.id]">{{adminProfile.account.toString()}}</a>
+    </div>
+  </li>
+</ol>
+
+    <div class="buttons">
+        <a class="edit" [routerLink]="['/adminProfile', 'edit', adminProfile.id]">Edit</a>
+        <input type="button" class="delete" (click)="destroy()" value="Delete" />
+    </div>
+</div>

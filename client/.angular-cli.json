@@ -1,0 +1,108 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "x"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "images",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "./vendors/bootstrap/dist/css/bootstrap.min.css",
+        "./vendors/font-awesome/css/font-awesome.min.css",
+        "./vendors/nprogress/nprogress.css",
+        "./vendors/iCheck/skins/flat/green.css",
+        "./vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css",
+        "./vendors/jqvmap/dist/jqvmap.min.css",
+        "./vendors/bootstrap-daterangepicker/daterangepicker.css",
+        "./vendors/datatables.net-bs/css/dataTables.bootstrap.min.css",
+        "./vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css",
+        "./vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css",
+        "./vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css",
+        "./vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css",
+        "./build/css/custom.css",
+        "./styles.scss"
+      ],
+      "scripts": [
+       "./vendors/jquery/dist/jquery.min.js",
+       "./vendors/bootstrap/dist/js/bootstrap.min.js",
+       "./vendors/validator/validator.js",
+       "./vendors/fastclick/lib/fastclick.js",
+       "./vendors/nprogress/nprogress.js",
+       "./vendors/Chart.js/dist/Chart.min.js",
+       "./vendors/gauge.js/dist/gauge.min.js",
+       "./vendors/bootstrap-progressbar/bootstrap-progressbar.min.js",
+       "./vendors/iCheck/icheck.min.js",
+       "./vendors/skycons/skycons.js",
+       "./vendors/Flot/jquery.flot.js",
+       "./vendors/Flot/jquery.flot.pie.js",
+       "./vendors/Flot/jquery.flot.time.js",
+       "./vendors/Flot/jquery.flot.stack.js",
+       "./vendors/Flot/jquery.flot.resize.js",
+       "./vendors/flot.orderbars/js/jquery.flot.orderBars.js",
+       "./vendors/flot-spline/js/jquery.flot.spline.min.js",
+       "./vendors/flot.curvedlines/curvedLines.js",
+       "./vendors/DateJS/build/date.js",
+       "./vendors/jqvmap/dist/jquery.vmap.js",
+       "./vendors/jqvmap/dist/maps/jquery.vmap.world.js",
+       "./vendors/jqvmap/examples/js/jquery.vmap.sampledata.js",
+       "./vendors/moment/min/moment.min.js",
+       "./vendors/bootstrap-daterangepicker/daterangepicker.js",
+       "./vendors/datatables.net/js/jquery.dataTables.min.js",
+       "./vendors/datatables.net-bs/js/dataTables.bootstrap.min.js",
+       "./vendors/datatables.net-buttons/js/dataTables.buttons.min.js",
+       "./vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js",
+       "./vendors/datatables.net-buttons/js/buttons.flash.min.js",
+       "./vendors/datatables.net-buttons/js/buttons.html5.min.js",
+       "./vendors/datatables.net-buttons/js/buttons.print.min.js",
+       "./vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js",
+       "./vendors/datatables.net-keytable/js/dataTables.keyTable.min.js",
+       "./vendors/datatables.net-responsive/js/dataTables.responsive.min.js",
+       "./vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js",
+       "./vendors/datatables.net-scroller/js/dataTables.scroller.min.js",
+       "./build/js/custom.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {}
+  }
+}

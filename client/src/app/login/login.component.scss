@@ -1,0 +1,45 @@
+.login-body {
+    background-image: url(../../images/asti.jpg);
+    background-attachment: fixed; 
+    background-clip: border-box; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin-left: -10%;
+    margin-right: -10%;
+    margin-top: -10%;
+    position: relative;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-top:-20px;
+}
+.login-container {
+    margin: auto;
+    width: 400px;
+    background-color: #eaecef;
+    padding: 50px 10px 10px 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+.center-block {
+    margin: auto;
+    padding: 10px;
+}
+.login-banner {
+    border-radius: 5px 5px 0px 0px;
+    height: 100px;
+    margin: auto;
+    width: 400px;
+    background-color: #4286f4;
+    padding: 10px;
+    margin-top:150px;
+}
+.login-title {
+    text-align: center;
+    font-size: 30px;
+    color: #f4f6f9;
+}
+.center {
+    text-align: center
+}

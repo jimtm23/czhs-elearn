@@ -1,0 +1,47 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a [routerLink]="['/adminProfile','create']" class="create">New AdminProfile</a></li>
+    </ul>
+</div>
+<div id="list-adminProfile" class="content scaffold-list" role="main">
+    <h1>AdminProfile List</h1>
+    <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Salutation</th>
+      <th>First Name</th>
+      <th>Middle Initial</th>
+      <th>Last Name</th>
+      <th>Nick Name</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="{'even': e, 'odd': !e}" *ngFor="let adminProfile of adminProfileList; let e = even;">
+      <td>
+        <a [routerLink]="['/adminProfile','show',adminProfile.id]">{{adminProfile.id}}</a>
+      </td>
+      <td>
+        <span>{{adminProfile.salutation}}</span>
+      </td>
+      <td>
+        <span>{{adminProfile.firstName}}</span>
+      </td>
+      <td>
+        <span>{{adminProfile.middleInitial}}</span>
+      </td>
+      <td>
+        <span>{{adminProfile.lastName}}</span>
+      </td>
+      <td>
+        <span>{{adminProfile.nickName}}</span>
+      </td>
+      <td>
+        <span>{{adminProfile.position}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
