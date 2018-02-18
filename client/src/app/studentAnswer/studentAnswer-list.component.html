@@ -1,0 +1,31 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a [routerLink]="['/studentAnswer','create']" class="create">New StudentAnswer</a></li>
+    </ul>
+</div>
+<div id="list-studentAnswer" class="content scaffold-list" role="main">
+    <h1>StudentAnswer List</h1>
+    <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Answer</th>
+      <th>Question</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngClass]="{'even': e, 'odd': !e}" *ngFor="let studentAnswer of studentAnswerList; let e = even;">
+      <td>
+        <a [routerLink]="['/studentAnswer','show',studentAnswer.id]">{{studentAnswer.id}}</a>
+      </td>
+      <td>
+        <span>{{studentAnswer.answer}}</span>
+      </td>
+      <td>
+        <a *ngIf="studentAnswer.question" [routerLink]="['/studentAnswer','show', studentAnswer.question.id]">{{studentAnswer.question.toString()}}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

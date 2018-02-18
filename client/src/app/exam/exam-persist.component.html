@@ -1,0 +1,103 @@
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Create Admin Account</h2>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <form class="form-horizontal form-label-left" name="save{className}" (ngSubmit)="save()">
+              <fieldset class="form">
+                  <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="question">Question
+                      <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <textarea required="" name="question" id="question" [(ngModel)]="exam.question" type="text" class="form-control col-md-7 col-xs-12"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="picture">Upload Image
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input name="picture" id="picture" type="file" class="form-control col-md-7 col-xs-12"/>
+                    </div>
+                  </div> -->
+
+                  <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="optionA">Option A
+                      <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input required="" type="radio" name="correctAnswer" id="correctAnswer" [(ngModel)]="exam.correctAnswer" value="A">
+                        </span>
+                        <input required="" type="text" name="optionA" id="optionA" [(ngModel)]="exam.optionA" type="text" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="optionB">Option B
+                      <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input required="" type="radio" name="correctAnswer" id="correctAnswer" [(ngModel)]="exam.correctAnswer" value="B">
+                        </span>
+                        <input required="" type="text" name="optionB" id="optionB" [(ngModel)]="exam.optionB" type="text" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="optionC">Option C
+                      <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" name="correctAnswer" id="correctAnswer" [(ngModel)]="exam.correctAnswer" value="C">
+                        </span>
+                        <input required="" type="text" name="optionC" id="optionC" [(ngModel)]="exam.optionC" type="text" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="optionD">Option D
+                      <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input required="" type="radio" name="correctAnswer" id="correctAnswer" [(ngModel)]="exam.correctAnswer" value="D">
+                        </span>
+                        <input required="" name="optionD" id="optionD" [(ngModel)]="exam.optionD" type="text" class="form-control col-md-7 col-xs-12"
+                        />
+                      </div>
+                    </div>
+                  </div>
+              </fieldset>
+              <div class="ln_solid"></div>
+              <div class="form-group" style="text-align: center">
+                <div class="col-md-6 col-md-offset-3">
+                  <input type="submit" class="btn btn-success save" [value]="create ? 'Save' : 'Update'" />
+                  <button type="submit" class="btn btn-primary" routerLink="/exam">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->

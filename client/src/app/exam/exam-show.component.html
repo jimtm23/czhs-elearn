@@ -1,0 +1,53 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a [routerLink]="['/index']" class="home">Home</a></li>
+        <li><a class="list" [routerLink]="['/exam', 'list']" class="list">Exam List</a></li>
+        <li><a class="create" [routerLink]="['/exam', 'create']" class="create">New Exam</a></li>
+    </ul>
+</div>
+<div id="show-part" class="content scaffold-show" role="main">
+    <h1>Show Exam</h1>
+    <ol class="property-list exam">
+  <li class="fieldcontain">
+    <span id="optionD-label" class="property-label">Option D</span>
+    <div class="property-value" aria-labelledby="optionD-label">
+      <span>{{exam.optionD}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="correctAnswer-label" class="property-label">Correct Answer</span>
+    <div class="property-value" aria-labelledby="correctAnswer-label">
+      <span>{{exam.correctAnswer}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="optionA-label" class="property-label">Option A</span>
+    <div class="property-value" aria-labelledby="optionA-label">
+      <span>{{exam.optionA}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="optionB-label" class="property-label">Option B</span>
+    <div class="property-value" aria-labelledby="optionB-label">
+      <span>{{exam.optionB}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="optionC-label" class="property-label">Option C</span>
+    <div class="property-value" aria-labelledby="optionC-label">
+      <span>{{exam.optionC}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="question-label" class="property-label">Question</span>
+    <div class="property-value" aria-labelledby="question-label">
+      <span>{{exam.question}}</span>
+    </div>
+  </li>
+</ol>
+
+    <div class="buttons">
+        <a class="edit" [routerLink]="['/exam', 'edit', exam.id]">Edit</a>
+        <input type="button" class="delete" (click)="destroy()" value="Delete" />
+    </div>
+</div>

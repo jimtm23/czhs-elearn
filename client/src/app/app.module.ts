@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { MainContentGuard } from "./guards/main-content-guard.service";
 import { LoginGuard } from "./guards/login-guard.service";
+import { ExamModule } from './exam/exam.module';
+import { StudentAnswerModule } from './studentAnswer/studentAnswer.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LoginGuard } from "./guards/login-guard.service";
     AppRoutingModule,
     NgbModule.forRoot(),
     AdminAccountModule,
-    AdminProfileModule
+    AdminProfileModule,
+    ExamModule,
+    StudentAnswerModule
 ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, AuthService, NavService, MainContentGuard, LoginGuard],
   bootstrap: [AppComponent]

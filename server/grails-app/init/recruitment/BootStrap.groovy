@@ -26,8 +26,8 @@ class BootStrap {
 	    def profile_superadmin = new AdminProfile(salutation: Salutation.MR, firstName: 'Juan', lastName: 'dela Cruz', nickName: 'jun', position: 'superadmin')
 	    def profile_administrator = new AdminProfile(salutation: Salutation.MR, firstName: 'Pedro', lastName: 'Padua', nickName: 'peds', position: 'administrator')
 
-	    def account_superadmin = new AdminAccount(username: 'sulayman@asti.dost.gov.ph', password: "p8uBaD5u_u#+ewa2p", enabled: true, profile: profile_superadmin)
-	    def account_administrator = new AdminAccount(username: 'administrator@asti.dost.gov.ph', password: "p8uBaD5u_u#+ewa2p", enabled: true, profile: profile_administrator)
+	    def account_superadmin = new AdminAccount(username: 'teacher', password: "password123", enabled: true, profile: profile_superadmin)
+	    def account_administrator = new AdminAccount(username: 'teacher1', password: "password123", enabled: true, profile: profile_administrator)
 
 	    perm_account_all.save flush:true, failOnError:true
 		perm_account_create.save flush:true, failOnError:true

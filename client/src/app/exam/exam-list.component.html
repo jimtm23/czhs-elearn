@@ -1,0 +1,52 @@
+<div class="right_col" role="main">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Question List</h2>
+          <div class="clearfix"></div>
+        </div>
+        <div id="list-adminAccount" class="x_content content scaffold-list" role="main"></div>
+        <table class="table table-striped table-bordered">
+          <thead>
+          <tr>
+            <th>Id</th>
+              <th>Question</th>
+              <th>Option A</th>
+              <th>Option B</th>
+              <th>Option C</th>
+              <th>Option D</th>
+              <th>Correct Answer</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr [ngClass]="{'even': e, 'odd': !e}" *ngFor="let exam of examList; let e = even;">
+            <td>
+              <a [routerLink]="['/exam','show',exam.id]">{{exam.id}}</a>
+            </td>
+            <td>
+              <span>{{exam.question}}</span>
+            </td>
+            <td>
+              <span>{{exam.optionA}}</span>
+            </td>
+            <td>
+              <span>{{exam.optionB}}</span>
+            </td>
+            <td>
+              <span>{{exam.optionC}}</span>
+            </td>
+            <td>
+              <span>{{exam.optionD}}</span>
+            </td>
+            <td>
+              <span>{{exam.correctAnswer}}</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

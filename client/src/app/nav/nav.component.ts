@@ -7,7 +7,7 @@ import { AuthService } from "../auth.service";
 @Component({
   selector: 'app-navigation',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
 
@@ -19,6 +19,7 @@ export class NavComponent implements OnInit {
   
   ngOnInit(): void {
     this.isLoggedIn$ = this.authService.isLoggedIn;
+    console.log(this.authService.getToken());
     this.navService.getNavData().subscribe(res => this.applicationData = res);
   }
 

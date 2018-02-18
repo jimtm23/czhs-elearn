@@ -32,7 +32,7 @@
         "./vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css",
         "./vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css",
         "./build/css/custom.css",
-        "./styles.scss"
+        "./styles.css"
       ],
       "scripts": [
        "./vendors/jquery/dist/jquery.min.js",
@@ -102,7 +102,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }
